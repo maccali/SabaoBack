@@ -10,6 +10,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const routes = require('./routes/rotes')
 const api = require('./routes/api')
+require('dotenv/config');
 
 const middleware = require('./middleware/main')
 
@@ -28,12 +29,6 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(morgan(':method :status :url :response-time'))
-
-// Exemplo de midleware
-// app.use(function(req, res, next){
-//     console.log('i am a mid')
-//     next();
-// })
 
 app.use(function (req, res, next) {
   middleware.logger(req, res, next)
