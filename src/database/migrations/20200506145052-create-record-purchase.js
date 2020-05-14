@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('RecordPurchases', {
@@ -6,45 +6,45 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       releaseDate: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       amount: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
       },
       grossAmount: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
       },
       taxRate: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
       },
       taxRatePay: {
         default: false,
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       distributingTax: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
       },
       distributingTaxPay: {
         default: false,
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
-    });
+        type: Sequelize.DATE,
+      },
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('RecordPurchases');
-  }
-};
+    return queryInterface.dropTable('RecordPurchases')
+  },
+}

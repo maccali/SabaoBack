@@ -1,3 +1,3 @@
-(function(){
-    console.log('Hollo from static file ');
-})();
+;(function () {
+  console.log('Hollo from static file ')
+})()

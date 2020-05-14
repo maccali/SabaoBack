@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.addColumn(
       'RecordPurchases', // name of Source model
-      'user_id', // name of the key we're adding 
+      'user_id', // name of the key we're adding
       {
         type: Sequelize.INTEGER,
         references: {
@@ -14,13 +14,13 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
       }
-    );
+    )
   },
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.removeColumn(
       'RecordPurchases', // name of Source model
       'user_id' // key we want to remove
-    );
-  }
-};
+    )
+  },
+}

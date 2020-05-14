@@ -1,5 +1,5 @@
 var express = require('express')
-var api = express.Router();
+var api = express.Router()
 var auth = require('./api/auth')
 var user = require('./api/user')
 var recordPurchase = require('./api/recordPurchase')
@@ -12,8 +12,8 @@ api.use('/tex', tex)
 
 api.get('/', function (req, res) {
   res.json({
-    massage: 'hello word from api'
+    massage: 'hello word from api',
   })
 })
 
-module.exports = api;
+module.exports = api

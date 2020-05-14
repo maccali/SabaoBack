@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Taxes', {
@@ -6,25 +6,25 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       taxValue: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
-    });
+        type: Sequelize.DATE,
+      },
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Taxes');
-  }
-};
+    return queryInterface.dropTable('Taxes')
+  },
+}
