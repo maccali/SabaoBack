@@ -57,6 +57,8 @@ var recordPurchaseController = {
       },
     })
 
+    records.reverse()
+
     return res.status(200).send({
       records,
     })
